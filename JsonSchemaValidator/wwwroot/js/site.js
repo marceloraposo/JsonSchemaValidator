@@ -12,7 +12,7 @@ var schema = CodeMirror.fromTextArea(document.getElementById('Schema'), {
     viewportMargin: Infinity
 });
 
-schema.setOption('theme', 'lesser-dark');
+schema.setOption('theme', 'paraiso-dark');
 schema.setSize(500, 400);
 
 var data = CodeMirror.fromTextArea(document.getElementById('Data'), {
@@ -23,5 +23,5 @@ var data = CodeMirror.fromTextArea(document.getElementById('Data'), {
     viewportMargin: Infinity
 });
 
-data.setOption('theme', 'lesser-dark');
+data.setOption('theme', 'paraiso-dark');
 data.setSize(500, 400);
