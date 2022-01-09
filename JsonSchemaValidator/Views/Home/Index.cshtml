@@ -1,7 +1,7 @@
 ﻿@model JsonSchemaValidator.Models.SchemaValidator
 <div>
     <form asp-action="FormValidator" asp-antiforgery="true" method="post">
-        <div class="row d-flex justify-content-center">            
+        <div class="row d-flex justify-content-center">
             <div class="form-group col-xs-6 d-flex justify-content-left">
                 <textarea asp-for="Schema" class="form-control" rows="20" cols="50"
                     placeholder="Schema is required"></textarea>
@@ -15,9 +15,12 @@
             </div>
         </div>
 
-        <div class="form-group d-flex justify-content-center text-danger">
-            @Html.Raw(Model.Errors)
-        </div>
+        @if (!string.IsNullOrEmpty(Model.Errors))
+        {
+            <div class="form-group d-flex justify-content-center text-danger">
+                @Html.Raw(Model.Errors)
+            </div>
+        }
 
         @if ((!string.IsNullOrEmpty(Model.Data) && !string.IsNullOrEmpty(Model.Schema)) &&
         string.IsNullOrEmpty(Model.Errors))
