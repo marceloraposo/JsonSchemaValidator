@@ -4,8 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Json Schema Validator</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!--codemirror-->
+    
+    <link rel="stylesheet" type="text/css" href="~/lib/codemirror/dist/css/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/codemirror/dist/theme/lesser-dark.css" />
+    <script language="javascript" type="text/javascript" src="~/lib/codemirror/dist/js/codemirror.js"></script>
+    <script language="javascript" type="text/javascript" src="~/lib/codemirror/dist/addon/edit/matchbrackets.js"></script>
+    <script language="javascript" type="text/javascript" src="~/lib/codemirror/dist/addon/display/placeholder.js"></script>    
+    <script language="javascript" type="text/javascript" src="~/lib/codemirror/dist/mode/javascript/javascript.js"></script>
+    
+
 </head>
 <body>
     <header>
@@ -32,6 +41,8 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />    
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
