@@ -13,7 +13,7 @@ var schema = CodeMirror.fromTextArea(document.getElementById('Schema'), {
 });
 
 schema.setOption('theme', 'paraiso-dark');
-schema.setSize(500, 400);
+schema.setSize(550, 400);
 
 var data = CodeMirror.fromTextArea(document.getElementById('Data'), {
     matchBrackets: true,
@@ -24,4 +24,4 @@ var data = CodeMirror.fromTextArea(document.getElementById('Data'), {
 });
 
 data.setOption('theme', 'paraiso-dark');
-data.setSize(500, 400);
+data.setSize(550, 400);

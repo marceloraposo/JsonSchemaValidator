@@ -1,17 +1,20 @@
 ﻿@model JsonSchemaValidator.Models.SchemaValidator
 <div>
-    <form asp-action="FormValidator" asp-antiforgery="true" method="post">
+    <form asp-action="Validator" asp-antiforgery="true" method="post">
         <div class="row d-flex justify-content-center">
-            <div class="form-group col-xs-6 d-flex justify-content-left">
+            <div class="form-group">
                 <textarea asp-for="Schema" class="form-control" rows="20" cols="50"
-                    placeholder="Schema is required"></textarea>
+                    placeholder="Schema is required"></textarea><br/>
+                @Html.ValidationMessage("Schema", new { @class="text-danger" })
             </div>
 
             <div>&nbsp;</div>
 
-            <div class="form-group col-xs-6 d-flex justify-content-right">
+            <div class="form-group">
                 <textarea asp-for="Data" class="form-control" rows="20" cols="50"
                     placeholder="Data is required"></textarea>
+                    <br/>
+                @Html.ValidationMessage("Data", new { @class="text-danger" })
             </div>
         </div>
 

@@ -28,8 +28,10 @@ namespace JsonSchemaValidator.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult FormValidator(Models.SchemaValidator model)
+        public IActionResult Validator(Models.SchemaValidator model)
         {
+            if(!ModelState.IsValid)
+                return View("Index",model);
 
             IList<string> validations = null;
 
